@@ -1,0 +1,112 @@
+{
+    "code": "1",
+    "data": [{
+        "index": "1",
+        "title": "涂料管理",
+        "icon": "el-icon-location",
+        "power":"1",
+        "children": [{
+            "index": "1-1",
+            "title": "发货记录",
+            "vuemodel": "SendOut",
+            "path": "/SendOut",
+            "power":"1"
+        },{
+            "index": "1-2",
+            "title": "退货记录",
+            "vuemodel": "ReturnOf",
+            "path": "/ReturnOf",
+            "power":"2"
+        }]
+    },{
+        "index": "2",
+        "title": "粉漆生产",
+        "icon": "el-icon-menu",
+        "power":"2",
+        "children": [{
+            "index": "2-1",
+            "title": "开箱记录",
+            "vuemodel": "PUnpacking",
+            "path": "/PUnpacking",
+            "power":"2"
+        },{
+            "index": "2-2",
+            "title": "生产维护",
+            "vuemodel": "PproduceMain",
+            "path": "/PproduceMain",
+            "power":"1"
+        },{
+            "index": "2-3",
+            "title": "参数维护",
+            "vuemodel": "PparameterMain",
+            "path": "/PparameterMain",
+            "power":"2"
+        },{
+            "index": "2-4",
+            "title": "检测记录",
+            "vuemodel": "PTestRecord",
+            "path": "/PTestRecord",
+            "power":"1"
+        },{
+            "index": "2-5",
+            "title": "计数记录",
+            "vuemodel": "PCountRecord",
+            "path": "/PCountRecord",
+            "power":"2"
+        }]
+    },{
+        "index": "3",
+        "title": "水漆生产",
+        "icon": "el-icon-document",
+        "power":"1",
+        "children": [{
+            "index": "3-1",
+            "title": "水漆开箱记录",
+            "vuemodel": "WUnpacking",
+            "path": "/WUnpacking",
+            "power":"1"
+        },{
+            "index": "3-2",
+            "title": "水漆生产维护",
+            "vuemodel": "WproduceMain",
+            "path": "/WproduceMain",
+            "power":"2"
+        },{
+            "index": "3-3",
+            "title": "水漆参数维护",
+            "vuemodel": "WparameterMain",
+            "path": "/WparameterMain",
+            "power":"2"
+        },{
+            "index": "3-4",
+            "title": "水漆检测记录",
+            "vuemodel": "WTestRecord",
+            "path": "/WTestRecord",
+            "power":"1"
+        },{
+            "index": "3-5",
+            "title": "水漆计数记录",
+            "vuemodel": "WCountRecord",
+            "path": "/WCountRecord",
+            "power":"1"
+        }]
+    },{
+        "index": "4",
+        "title": "异常管理",
+        "icon": "el-icon-setting",
+        "power":"2",
+        "children": [{
+            "index": "4-1",
+            "title": "发货异常记录",
+            "vuemodel": "AbnormalSendout",
+            "path": "/AbnormalSendout",
+            "power":"1"
+        },{
+            "index": "4-2",
+            "title": "退货异常记录",
+            "vuemodel": "AbnormalReturnOf",
+            "path": "/AbnormalReturnOf",
+            "power":"2"
+        }]
+    }]
+}
