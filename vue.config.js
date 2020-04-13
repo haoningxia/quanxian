@@ -9,12 +9,12 @@ module.exports = {
   devServer: {
     port:8080,
     before(app){
-      // app.get('/api/menubar',(req,res,next)=>{
-      //   res.json(mockData)
-      // })
-      app.post('/api/menubar', (req, resp) => {
-        resp.json(mockData)
+      app.get('/api/menubar',(req,res,next)=>{
+        res.json(mockData)
       })
+      // app.post('/api/menubar', (req, resp) => {
+      //   resp.json(mockData)
+      // })
     }
   }
 }

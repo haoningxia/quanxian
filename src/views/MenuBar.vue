@@ -1,13 +1,13 @@
 <template>
     <div>
-        <el-menu default-active="1-1" class="el-menu-vertical-demo">
-            <el-submenu :index="item.index" v-for="(item , index) in listCont" :key="index">
+        <el-menu default-active="1-1" class="el-menu-vertical-demo" @select="handleSelect">
+            <el-submenu :index="item.index" v-for="(item, index) in listCont" :key="index" :indexPath='item.path'>
                 <template slot="title">
                     <i :class="item.icon"></i>
                     <span slot="title">{{item.title}}</span>
                 </template>
-                <el-menu-item-group v-for="(child , index) in item.children" :key="index">
-                    <el-menu-item :index="child.index">{{child.title}}</el-menu-item>
+                <el-menu-item-group v-for="(child, index) in item.children" :key="index" :indexPath='child.path'>
+                    <el-menu-item :index="child.path">{{child.title}}</el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
         </el-menu>
@@ -21,7 +21,9 @@ export default {
         }
     },
     mounted() {
-        this.getMockData()
+        this.listCont = [];
+        this.listCont = JSON.parse(localStorage.getItem('menudata'));
+        // this.getMockData()
     },
     methods: {
         getMockData() {
@@ -32,6 +34,10 @@ export default {
             }).catch(err => {
                 alert(err)
             })
+        },
+        handleSelect(key) {
+            // console.log(key)
+            this.$router.push(`/home/${key}`);
         }
     }
 }

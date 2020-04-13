@@ -15,6 +15,7 @@ const WCountRecord = () => import('../views/WCountRecord.vue') //水漆计数维
 
 const AbnormalSendout = () => import('../views/AbnormalSendout.vue') //发货异常
 const AbnormalReturnOf = () => import('../views/AbnormalReturnOf.vue') //退货异常
+const Home = () => import('../components/Home.vue') //home
 
 export default {
     SendOut,
@@ -30,5 +31,6 @@ export default {
     WTestRecord,
     WCountRecord,
     AbnormalSendout,
-    AbnormalReturnOf
+    AbnormalReturnOf,
+    Home
 }

@@ -40,6 +40,7 @@ export default {
       onlogin (loginFrom) {
         this.$refs[loginFrom].validate((valid) => {
           if (valid) {
+              sessionStorage.setItem('username',this.loginFrom.name);
             this.$router.push({path:`/home`})
           } else {
             alert('error submit!!');

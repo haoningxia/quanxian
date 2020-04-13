@@ -10,6 +10,7 @@
                 </el-aside>
                 <el-main>
                     <listCont />
+                    <router-view></router-view>
                 </el-main>
             </el-container>
         </el-container>
